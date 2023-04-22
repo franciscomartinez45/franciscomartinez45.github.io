@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id = "page_wrapper">
+        <div id = "header">
+            <img src = "img/kasai_logo.jpg" alt = "">
+        </div>
+        <div id = "nav">
+            <div class = "nav-item"><a href = "index.html">Welcome </a></div>
+            <div class = "nav-item"><a href ="kasai_food.html">Food</a></div>
+    
+           
+            <div class = "nav-item"><a href = "hours.html">Location & Hours</a></div>
+            <div class = "nav-item"><a href = "#footer">About the creator</a></div>
+          
+        </div>
+        <div id = "body">
+            <div id = "hours">
+                <h1>hours</h1>
+                <li>
+                    <ul>Monday: 9:30-9pm<p class = "Open">Open</p><p class = "Closed">Closed</p></ul>
+                    <ul>Tuesday: 9:30-9pm<p class = "Open">Open</p><p class = "Closed">Closed</p></ul>
+                    <ul>Wednesday: 9:30-9pm<p class = "Open">Open</p><p class = "Closed">Closed</p></ul>
+                    <ul>Thursday: 9:30-9pm<p class = "Open">Open</p><p class = "Closed">Closed</p></ul>
+                    <ul>Friday: 9:30-9pm<p class = "Open">Open</p><p class = "Closed">Closed</p></ul>
+                    <ul>Saturday: 9:30-9pm<p class = "Open">Open</p><p class = "Closed">Closed</p></ul>
+                    <ul>Closed</ul>
+                </li>
+            </div>
+            
+            <div id = "map">
+            <h1>Location</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.9335191728715!2d-118.35563942373221!3d33.89136597321799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b44ebc9ff2f9%3A0x59274f44ee0779b3!2sKasai%20Teriyaki%20Bowl!5e0!3m2!1sen!2sus!4v1681970169876!5m2!1sen!2sus" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      
+      
+    </div>
+       
+        <div id = "footer">
+            <h1>Contact Us</h1>
+<h2>Information:</h2> 
+  +1(234)567-8900 <br>
+<a href="mailto:"> francisco_martin2446@elcamino.edu</a><br>
+16007 Crenshaw Blvd <br>  Torrance, CA 90506
+
+<h1>Suggestions</h1>
+<p >if you need further assistance or would like to send suggestions, hit the email link below</p>
+<a href="mailto:"> Email Us!</a><br>
+<p>@Copyright</p>
+</div>
+        </div>
+
+   
+
+</body>
+<script>
+    for (var i=0;i<6;i++){
+        document.getElementsByClassName("open")[i].style.display = "none";
+        document.getElementsByClassName("closed")[i].style.display = "none";
+    }
+    const day = new Date();
+    const today = document.getElementsByTagName('ul')[day.getDay()-1];
+    const open_ = document.getElementsByClassName("open")[day.getDay()-1];
+    const closed = document.getElementsByClassName("closed")[day.getDay()-1];
+    console.log(day);
+    
+    if (day.getHours()>=9.5&&day.getHours()<21){
+        today.style.color = "green";
+        open_.style.display = "inline-block";
+    }
+    today.style.color = "red";  
+    closed.style.display = "inline-block";
+    
+    
+    
+</script>
+</html>

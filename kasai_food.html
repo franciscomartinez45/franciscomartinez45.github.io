@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Document</title>
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+</head>
+<body>
+    
+    <div id = "page_wrapper">
+        <div id = "header">
+            <img src = "img/kasai_logo.jpg" alt = "">
+        </div>
+        <div id = "nav">
+            <div class = "nav-item"><a href = "index.html">Welcome </a></div>
+            <div class = "nav-item"><a href ="kasai_food.html">Food</a></div>
+         
+           
+            <div class = "nav-item"><a href = "hours.html">Location & Hours</a></div>
+            <div class = "nav-item"><a href = "#footer">About the creator</a></div>
+        </div>
+        <div id = "body">
+
+            <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide" data-splide-interval="5000">
+                              <img src="img/duck.jpg" alt="">
+                
+                              <div class = "content">
+                                Description 02
+                            </div>
+                          </li>
+              
+                          <li class="splide__slide" data-splide-interval="5000">
+                              <img src="img/penguin.jpg" alt="">
+                              <div class = "content">
+                                  Description 02
+                              </div>
+                          </li>
+                          <li class="splide__slide" data-splide-interval="5000">
+                            <img src="img/cow.jpg"  alt="">
+                            <div class = "content">
+                                Description 02
+                            </div>
+                        </li>
+                      </ul>
+                </div>
+              </div>
+              
+       
+      
+        
+        <div id = "footer">
+            <h1>Contact Us</h1>
+<h2>Information:</h2> 
+  +1(234)567-8900 <br>
+<a href="mailto:"> francisco_martin2446@elcamino.edu</a><br>
+16007 Crenshaw Blvd <br>  Torrance, CA 90506
+
+<h1>Suggestions</h1>
+<p >if you need further assistance or would like to send suggestions, hit the email link below</p>
+<a href="mailto:"> Email Us!</a><br>
+<p>@Copyright</p>
+</div>
+        </div>
+
+   
+<script>
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '.splide', {
+    speed:2200,
+    cover:true,
+    heightRatio: 0.5,
+    autoplay: true,
+    pauseOnFocus: true,
+    rewind: true,
+  } ).mount();
+} );
+</script>
+
+   </script>
+</body>
+</html>
