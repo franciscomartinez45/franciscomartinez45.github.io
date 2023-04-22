@@ -9,14 +9,12 @@
 <body>
     
     <div id = "page_wrapper">
-        <div id = "header">
-            <img src = "img/kasai_logo.jpg" alt = "">
-        </div>
-        <div id = "nav">
+     <div id = "disclaimer"><div id = "section"><h1>Curtain</h1>
+    <button id="remove" onclick = remove()>Remove Curtain</button></div>
+</div>    
+    <div id = "nav">
             <div class = "nav-item"><a href = "index.html">Welcome </a></div>
             <div class = "nav-item"><a href ="kasai_food.html">Food</a></div>
-           
-           
             <div class = "nav-item"><a href = "hours.html">Location & Hours</a></div>
             <div class = "nav-item"><a href = "#footer">About the creator</a></div>
           
@@ -56,5 +54,15 @@
 <p>@Copyright</p>
 </div>
 </div>
+<script>
+    function remove(){
+        const disclaimer = document.getElementById("disclaimer");
+      if(disclaimer.style.display == ''){
+        disclaimer.style.display = "none"
+      }
+      
+
+    }
+</script>
 </body>
 </html>
