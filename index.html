@@ -4,42 +4,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css" />
-    <title>Document</title>
+   
+   
+    <title>Welcome: Kasai Teriyaki Fan Page</title>
 </head>
 <body>
-    
     <div id = "page_wrapper">
-     <div id = "disclaimer"><div id = "section"><h1>Curtain</h1>
-    <button id="remove" onclick = remove()>Remove Curtain</button></div>
+     <div id = "disclaimer">
+        <div id = "section">
+            <h1>Curtain</h1>
+                <button id="remove" onclick = remove()>Remove Curtain</button>
+            </div>
 </div>    
     <div id = "nav">
             <div class = "nav-item"><a href = "index.html">Welcome </a></div>
-            <div class = "nav-item"><a href ="kasai_food.html">Food</a></div>
-            <div class = "nav-item"><a href = "hours.html">Location & Hours</a></div>
+            <div class = "nav-item"><a href = "index.html#hours">Location & Hours</a></div>
+            <div class = "nav-item"><a href ="menu.html">Menu</a></div>
             <div class = "nav-item"><a href = "#footer">About the creator</a></div>
           
         </div>
         <div id = "body">
-          
-            <div id ="left">
-                <h1>Welcome to Kasai's fan page</h1>
-                <h2>Disclaimer:</h2>
-                <p>This website is a fan page and not an official affiliate of Kasai Restuarant</p>
-                <h1></h1>
-
+            
+            <div id = "left"></div>
+            <div id = "content">
+                <h1>About this Website:</h1>
+                <p>This is a fan made website of a Teriyaki kitchen located in the heart of the South Bay: Lawndale, CA</p>
+                <div id = "hours">
+                    <h1>hours</h1>
+                    <ul>
+                        <li class = "hour">Monday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
+                        <li class = "hour">Tuesday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
+                        <li class = "hour">Wednesday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
+                        <li class = "hour">Thursday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
+                        <li class = "hour">Friday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
+                        <li class = "hour">Saturday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
+                        <li class = "hour">Sunday:<p class = "Closed">Closed</p></ul>
+                    </ul>
+                </div>
+                
+               
+                <h1>Location</h1>
+                <div id = "map">
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.9335191728715!2d-118.35563942373221!3d33.89136597321799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b44ebc9ff2f9%3A0x59274f44ee0779b3!2sKasai%20Teriyaki%20Bowl!5e0!3m2!1sen!2sus!4v1681970169876!5m2!1sen!2sus" style="border:3px;" width="100%" height="100%" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div id = "right">
-                <h1>See also</h1>
-<h2>Order from Kasai from many providers:</h2>
-<a href = "https://food.google.com/chooseprovider?restaurantId=/g/12m993r4z&g2lbs=ADZRdkvshCymaUgJDDzO0KoGTxZvyt5l0SvqlL5A9ik2igcPhB6u02MR5bxd4pYve60UBgmsoodYElb7uPnenyXt3vGsLp08C4V43QAfEAR1h4TlYEvCpNuxNTAZOI5WykbZSfsoqbxw&hl=en-US&gl=us&ssta=1&fo_m=MfohQo559jFvMWvkddHzV46uMT_RFPQ05bfKMQVr5-7IofUJMU_hT8vrWuwRMUv3d8yCO4PgMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&gei=DClCZKSrMZnLwbkPlMWD0A4&ei=DClCZKSrMZnLwbkPlMWD0A4&fo_s=OA&sei=CdgGZXSYxruHEZAkmhhPcqiA&utm_campaign&utm_source=search"><li>Natural History</li></a>
-<h2>Yelp Review:</h2>
-<a href = "https://www.yelp.com/biz/kasai-teriyaki-bowl-lawndale"><li>Yelp</li></a>
-<h2>Get Directions to Kasai:</h2>
-<a href = "https://www.yelp.com/map/kasai-teriyaki-bowl-lawndale"><li>Yelp Map directions</li></a>
-
-            </div>
-      
         </div>
+            <div id = "right"></div>
+          
+       
+              </div>
+            
+
+
         
         <div id = "footer">
             <h1>Contact Us</h1>
@@ -54,15 +69,53 @@
 <p>@Copyright</p>
 </div>
 </div>
+
 <script>
-    function remove(){
+       function remove(){
         const disclaimer = document.getElementById("disclaimer");
-      if(disclaimer.style.display == ''){
+        if(disclaimer.style.display == ''){
         disclaimer.style.display = "none"
       }
-      
-
     }
+    const open_p = document.getElementsByClassName("Open");
+    const closed_p = document.getElementsByClassName("Closed");
+    for(var i = 0;i<6;i++){
+        open_p[i].style.display = "none";
+        closed_p[i].style.display = "none";
+    }
+    
+
+    
+  
+    const day = new Date();
+    const today = document.getElementsByTagName('li')[day.getDay()];
+    const closed = document.getElementsByClassName("Closed");
+    const open_h = document.getElementsByClassName("Open");
+    console.log(today);
+    
+    if (today.value == 0){
+        closed[6].style.display = "inline-block";
+        closed[6].style.color = "red";
+        document.getElementsByTagName('li')[6].style.color = "red";
+    }
+    else{
+        if(day.getHours()>=9.5&&day.getHours()<=21){
+            open_h[today.value-1].style.display = "inline-block";
+            open_h[today.value-1].style.color = "green;"
+            document.getElementsByTagName('li')[today.value-1].style.color = "green";
+        }
+        else{
+            closed[today.value-1].style.display = "inline-block";
+            closed[today.value-1].style.color = "red";
+            document.getElementsByTagName('li')[today.value-1].style.color = "red";
+        }
+    }
+    
+    
+
 </script>
+
 </body>
+
+
 </html>

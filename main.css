@@ -1,45 +1,56 @@
+
+
 body{
     background-color: #A9927D;
     color:#5E503F;
-    
+  
 }
 #page_wrapper{
     border: 1px;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-areas:
-    'nav nav nav nav'
-    'body body body body'
-    'footer footer footer footer';
+    'nav nav nav'
+    'body body body'
+    'footer footer footer';
     position:relative;
 }
 
-#faq{
-   
-    grid-area: FAQ;
-    border: 1px solid black;
-}
+
 #body{
-    background-color:#A9927D;
-    color:white;
     grid-area:body;
-    border:1px solid black;
-    display:flex;
-    justify-content:center;
-    padding:25px;
-    height:auto;
+    display:grid;
+    grid-template-areas: "left_box content right_box";
     position:relative;
-
+    
 }
-
+#content{
+    background-color:antiquewhite;
+    grid-area:content;
+    height:fit-content;
+    padding-bottom:25px;
+}
+#content p{
+    text-align:center;
+    font-size:18px;
+    font-weight: 550;
+}
+#content h1{
+   text-align:center;
+    font-size:25px;
+    font-weight: 700;
+}
+#left {
+    grid-area:left_box;
+   
+    border-right:1px dashed black;
+}
 #right{
-    padding:50px;
-   border-left:1px dashed white;
+   grid-area:right_box;
+    border-left:1px dashed black;
 }
-#body h1{
-    justify-items: center;
-}
+
 #footer{
 	text-align:center;
 	background-color:#262924;
@@ -60,52 +71,44 @@ body{
     justify-content:center;
     position:sticky;
     top:3px;
+    bottom: auto;
     z-index:1;
+    height:35px;
+    padding-bottom:25px;
 }
 
 .nav-item{
     color:#86838368;
-    padding:20px;
+    padding:35px;
     background-color: white;
+}
+.nav-item a{
+    text-decoration:none;
+    color:#262924;
 }
 .nav-item a:visited {
     text-decoration: none;
     color:#86838368;
 }
-.nav-item a:link{
-    text-decoration:none;
-}
+
 .nav-item a:hover{
     font-size:17px;
     color:black;
 }
-#hours li p {
-    display: inline-block;
-    text-indent: 15px;
+
+#hours li{
+    display:flex;
+    padding:15px;
+    margin:10px;
+    justify-content: center;;
 }
 
-#image-carousel{
-    margin:5px;
+
+#hours{
     background-color:white;
-    color:black;
-    width: 45%;
-    position:relative;
-    height:auto;
-  
-   
+    padding:5px;
 }
 
-.splide__slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-.content{
-    justify-content:center;
-}
-.content h1{
-    color:red;
-      }
    #disclaimer{
     Width:100%;
     height:100%;
@@ -126,3 +129,10 @@ body{
    #hours li{
     list-style-type: none;
    }
+#map{
+    margin:50px;
+}
+.splide__slide p{
+    color:red;
+    text-align: right;
+}
