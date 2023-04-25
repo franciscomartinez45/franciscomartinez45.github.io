@@ -1,7 +1,7 @@
 
 
 body{
-    background-color: #A9927D;
+    background-color: whitesmoke;
     color:#5E503F;
   
 }
@@ -19,6 +19,7 @@ body{
 
 
 #body{
+    font-family: 'Inconsolata', monospace;
     grid-area:body;
     display:grid;
     grid-template-areas: "left_box content right_box";
@@ -30,6 +31,7 @@ body{
     grid-area:content;
     height:fit-content;
     padding-bottom:25px;
+    
 }
 #content p{
     text-align:center;
@@ -75,12 +77,16 @@ body{
     z-index:1;
     height:35px;
     padding-bottom:25px;
+   
+    
 }
 
 .nav-item{
     color:#86838368;
     padding:35px;
-    background-color: white;
+    background-color:black;
+    opacity:.8;
+    border: 2px solid #A9927D;
 }
 .nav-item a{
     text-decoration:none;
@@ -93,7 +99,7 @@ body{
 
 .nav-item a:hover{
     font-size:17px;
-    color:black;
+    color:white;
 }
 
 #hours li{
@@ -125,6 +131,10 @@ body{
    }
    #disclaimer button{
     all:unset;
+    border: 2px solid #A9927D;
+    padding:15px;
+    
+
    }
    #hours li{
     list-style-type: none;
@@ -133,6 +143,21 @@ body{
     margin:50px;
 }
 .splide__slide p{
-    color:red;
+    color:White;
     text-align: right;
+}
+#logo{
+color:red;
+font-size:25px;
+}
+
+#welcome{
+    background-image:url("img/front.jpg");
+    background-size:cover;
+    width:100%;
+    height:650px;
+  
+    background-repeat: no-repeat;
+   
+
 }
