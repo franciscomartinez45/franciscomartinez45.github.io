@@ -41,17 +41,20 @@
 
                 </p>
                 <div id = "hours">
-                    <h1>Business Hours</h1>
+                   
+                    <div><h1>Business Hours</h1>
                     <ul>
-                        <li class = "hour">Monday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
-                        <li class = "hour">Tuesday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
-                        <li class = "hour">Wednesday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
-                        <li class = "hour">Thursday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
-                        <li class = "hour">Friday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
-                        <li class = "hour">Saturday: 9:30-9pm<p class="Open">Open</p><p class ="Closed">Closed</p></li>
+                        <li class = "hour">Monday: 9:30-9pm<p class="Open"> Open</p><p class ="Closed"> Closed</p></li>
+                        <li class = "hour">Tuesday: 9:30-9pm<p class="Open"> Open</p><p class ="Closed"> Closed</p></li>
+                        <li class = "hour">Wednesday: 9:30-9pm<p class="Open"> Open</p><p class ="Closed"> Closed</p></li>
+                        <li class = "hour">Thursday: 9:30-9pm<p class="Open"> Open</p><p class ="Closed"> Closed</p></li>
+                        <li class = "hour">Friday: 9:30-9pm<p class="Open"> Open</p><p class ="Closed"> Closed</p></li>
+                        <li class = "hour">Saturday: 9:30-9pm<p class="Open"> Open</p><p class ="Closed"> Closed</p></li>
                         <li class = "hour">Sunday: Closed</ul>
                     </ul>
                 </div>
+                </div>
+                
                 
                
                 <h1>Location and Directions</h1>
@@ -97,6 +100,8 @@
     for(var i = 0;i<6;i++){
         closed_p[i].style.display = "none";
         open_p[i].style.display = "none";
+        closed_p[i].style.textIndent = "5px";
+        open_p[i].style.textIndent = "5px";
         
     }
     
@@ -107,7 +112,8 @@
     const today = document.getElementsByTagName('li')[day.getDay()];
     const closed = document.getElementsByClassName("Closed");
     const open_h = document.getElementsByClassName("Open");
-    console.log(day.getDay());
+    
+
     
     if (day.getDay() == 0){
         document.getElementsByTagName('li')[6].style.color = "red";

@@ -82,11 +82,11 @@ body{
 }
 .nav-item a{
     text-decoration:none;
-    color:#262924;
+    color:#A9927D;
 }
 .nav-item a:visited {
     text-decoration: none;
-    color:#86838368;
+    color:#A9927D;
 }
 
 .nav-item a:hover{
@@ -95,16 +95,17 @@ body{
 }
 
 #hours li{
-    display:flex;
     padding:15px;
     margin:10px;
-    justify-content: center;;
+    display:block;
 }
 
 
 #hours{
     background-color:white;
     padding:5px;
+    display:flex;
+    justify-content:center;
 }
 
    #disclaimer{
@@ -133,6 +134,7 @@ body{
    }
 #map{
     margin:50px;
+    padding-left:10%;
 }
 .splide__slide p{
     color:white;
