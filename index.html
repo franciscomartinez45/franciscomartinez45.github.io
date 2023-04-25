@@ -113,13 +113,13 @@
     const closed = document.getElementsByClassName("Closed");
     const open_h = document.getElementsByClassName("Open");
     
-
+console.log(day.getHours()+day.getMinutes()/60);
     
     if (day.getDay() == 0){
         document.getElementsByTagName('li')[6].style.color = "red";
     }
     else{
-        if(day.getHours()>=9.5&&day.getHours()<=21){
+        if((day.getHours()+day.getMinutes()/60)>=9.5&&day.getHours()<21){
             open_h[day.getDay()-1].style.display = "inline-block";
             open_h[day.getDay()-1].style.color = "green;"
             document.getElementsByTagName('li')[day.getDay()-1].style.color = "green";
